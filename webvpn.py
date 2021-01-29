@@ -54,7 +54,7 @@ def getOrdinaryUrl(url):
         print(key_cph[:32])
         return None
     else:
-        hostname = getPlaintext(key_cph[32:64])
+        hostname = getPlaintext(key_cph[32:])
         fold = '/'.join(parts[5:])
 
         return pro + "://" + hostname + '/' + fold
