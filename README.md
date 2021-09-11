@@ -49,7 +49,7 @@ institution = 'webvpn.xxx.edu.cn'
 
 即可切换为XXX的WebVPN。GL
 
-# 友链
+# 参见
 
 [webvpn4dut](https://github.com/cjhahaha/webvpn4dut)：JavaScript「实现」的WebVPN链接转换。
 
