@@ -36,12 +36,14 @@ def getVPNUrl(url):
     add = parts[1]
     
     hosts = add.split('/')
-    cph = getCiphertext(hosts[0])
+    domain = hosts[0].split(':')[0]
+    port = '-' + hosts[0].split(':')[1] if ":" in hosts[0] else ''
+    cph = getCiphertext(domain)
     fold = '/'.join(hosts[1:])
 
     key = hexlify(iv_).decode('utf-8')
     
-    return 'https://' + institution + '/' + pro + '/' + key + cph + '/' + fold
+    return 'https://' + institution + '/' + pro + port + '/' + key + cph + '/' + fold
 
 def getOrdinaryUrl(url):
     '''From webVPN url to ordinary url'''
