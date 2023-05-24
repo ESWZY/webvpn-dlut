@@ -1,8 +1,8 @@
 from Crypto.Cipher import AES
 from binascii import hexlify, unhexlify
 
-key_ = b'wrdvpnisthebest!'
-iv_  = b'wrdvpnisthebest!'
+key_ = b'Wxzxvpn2023key@$'
+iv_  = b'Wxzxvpn2023key@$'
 institution = 'webvpn.dlut.edu.cn'   # Change the hostname here like 'webvpn.xxx.edu.cn'
 
 def getCiphertext(plaintext, key = key_, cfb_iv = iv_, size = 128):
