@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
-from Crypto.Cipher import AES
 from binascii import hexlify, unhexlify
+from Crypto.Cipher import AES
 
 
 def getCiphertext(plaintext, key, cfb_iv, size = 128):
@@ -69,11 +69,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
     url = args.url
     key_ = args.key.encode('utf-8')
-    iv_  = args.iv.encode('utf-8')
+    iv_ = args.iv.encode('utf-8')
 
     if args.encode:
         institution = args.institution
-        print(f"from ordinary url: {getVPNUrl(url)}")
+        print(getVPNUrl(url))
     elif args.decode:
         institution = url.split('/')[2]
-        print(f"from webVPN url: {getOrdinaryUrl(url)}")
+        print(getOrdinaryUrl(url))
